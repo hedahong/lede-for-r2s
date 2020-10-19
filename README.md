@@ -1,4 +1,4 @@
-# lede-for-r2s 固件在线编译项目 fork hedahong
+# lede-for-r2s 固件在线编译项目 fork hedahong2
 * 直接下载 https://github.com/szdosar/lede-for-r2s/releases
 
 ![image](https://github.com/szdosar/lede-for-r2s/blob/main/r2soverview.png)
