@@ -96,14 +96,20 @@ jobs:
         run: |
           cd lede
           rm -rf artifact.zip
-          release_tag="R2S-Lean-firmware-$(date +%Y-%m-%d)"
+          release_tag="hdh-R2S-Lean-firmware-$(date +%Y-%m-%d_%Hh%Mm)"
           echo "##[set-output name=release_tag;]$release_tag"
           zip -r artifact.zip ./artifact/firmware/*.gz
+          
+      - name: Upload Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: r2s_lede_img
+          path: ./lede/artifact/
 
       - name: Upload binaries to release
        #uses: svenstaro/upload-release-action@v2
-       #uses: actions/upload-artifact@master
-        uses: softprops/action-gh-release@v1
+       #uses: softprops/action-gh-release@v1
+        uses: actions/upload-artifact@master
         with:
            repo_name: hedahong/lede-for-r2s
         # A personal access token for the GitHub repository in which the release will be created and edited.
