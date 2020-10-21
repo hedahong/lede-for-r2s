@@ -27,6 +27,7 @@ jobs:
         run: |
           cd lede
           echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
+          echo 'src-git dockerman https://github.com/9l/luci-app-dockerman' >> feeds.conf.default
         
       - name: Update feeds
         run: |
@@ -103,7 +104,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@master
         with:
-          name: r2s_lede_img20201021v1
+          name: r2s_lede_r2s_lede_img20201021v1img2
           path: ./lede/artifact/
 
       - name: Upload binaries to release
