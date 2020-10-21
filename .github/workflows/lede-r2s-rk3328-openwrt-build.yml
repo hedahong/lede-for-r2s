@@ -103,7 +103,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@master
         with:
-          name: r2s_lede_img2
+          name: r2s_lede_img20201021v1
           path: ./lede/artifact/
 
       - name: Upload binaries to release
