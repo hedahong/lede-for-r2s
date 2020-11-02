@@ -30,7 +30,6 @@ jobs:
           echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
           echo 'src-git diskman https://github.com/lisaac/luci-app-diskman' >> feeds.conf.default
           echo 'src-git dockerman https://github.com/9l/luci-app-dockerman' >> feeds.conf.default
-          echo 'src-git diskman https://github.com/lisaac/luci-app-diskman' >> feeds.conf.default
         
       - name: Update feeds
         run: |
