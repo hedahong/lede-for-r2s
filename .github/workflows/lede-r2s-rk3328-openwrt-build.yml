@@ -26,8 +26,11 @@ jobs:
       - name: 定制化 feeds.conf.default
         run: |
           cd lede
+          sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
           echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
+          echo 'src-git diskman https://github.com/lisaac/luci-app-diskman' >> feeds.conf.default
           echo 'src-git dockerman https://github.com/9l/luci-app-dockerman' >> feeds.conf.default
+          echo 'src-git diskman https://github.com/lisaac/luci-app-diskman' >> feeds.conf.default
         
       - name: Update feeds
         run: |
